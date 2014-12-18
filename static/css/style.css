@@ -1,0 +1,253 @@
+
+@import url(http://fonts.googleapis.com/css?family=Questrial);
+
+#body{
+    background-color: #000;
+    margin: 0;
+    padding:0;
+
+
+}
+#container{
+    width: 100%;
+    position: absolute;
+    margin:0;
+    top:100%;
+    left:0;
+    padding: 0;
+    background-color: #eee;
+    display: block;
+    font-family: Questrial;
+}
+
+#header-wrapper{
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height:100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0,102,102,1);
+    min-height:500px;
+}
+
+#title-wrapper{
+    position:absolute;
+    width: 90%;
+    margin: 130px auto;
+    padding: 25px;
+    text-align: right;
+    font-size: 65px;
+    font-family: Questrial;
+    z-index: 1;
+}
+
+#logo{
+
+    position:absolute;
+    top:10px;
+    left: 30px;
+    padding: 0;
+    text-align: right;
+    z-index: 1; 
+    opacity:0.7;  
+}
+
+
+
+#title{
+    
+    
+    padding: 5px 10px 5px;
+    text-align: right;
+    font-size: 80px;
+    font-family: Questrial;
+    z-index: 1;
+    
+
+}
+
+#dates{
+    
+    padding: 5px 10px;
+    text-align: right;
+    font-size: 30px;
+    font-family: Questrial;
+    z-index: 1;
+    
+
+}
+
+#pretitle{
+    
+    padding: 0px 10px;
+    text-align: right;
+    font-size: 45px;
+    font-family: Questrial;
+    z-index: 1;
+    color:rgba(250,183,0,1);
+}
+
+#subtitle{
+    
+    
+    padding: 10px;
+    text-align: right;
+    font-size: 30px;
+    font-family: Questrial;
+    z-index: 1;
+    color:rgba(250,183,0,1);
+    
+}
+
+#mainContent{
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    color: #333;
+    overflow: hidden;
+}
+
+#home{
+    width: 50%;
+    margin: 50px auto;
+    text-align: right;
+    padding: 0;
+    opacity:1;
+}
+
+#my_fixable_header{
+    position: absolute;
+    top:100%;
+    left:0;
+    background-color: rgba(227,62,62,1);
+    margin: 0;
+    padding:0;
+    display: block;
+    width: 100%;
+    border: 0;
+    opacity: 1;
+    text-align: center;
+    height:3em;
+    z-index: 2;
+    font-family: Questrial;
+
+}
+
+
+.fixed {
+    top:0;
+    left:0;
+    position:fixed;
+}
+
+
+.menu {
+  text-align:center;
+  background: url('../img/logo_50px.png') center left no-repeat,
+              url('../img/sponsors/EMBLw.png') center right no-repeat;
+  
+  background-size:contain, contain;
+}
+
+.menu::after {
+  background: rgba(174,25,25,1);
+  content: "";
+  position: absolute;
+  top: 3em;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  box-shadow: 0 5px 10px 0 #bbb;
+}
+
+
+.menu ul {
+  list-style-type:none;
+  margin:0 auto;
+  padding:0;
+  height:3em;
+  /*width:60em;*/
+}
+
+.menu ul li {
+  display:inline-block;
+  margin:0px;
+  padding:0px;
+  /*float:left;*/
+  height:3em;
+  /*border-left:1px solid rgba(227,62,62,0.9); */
+}
+
+.menu ul li:last-child {
+  /*border-right:1px solid rgba(227,62,62,0.9);*/
+}
+
+.menu ul li a {
+  background-color:rgba(227,62,62,0.9);
+  text-decoration:none;
+  font-size:1em;
+  margin:0px;
+  line-height:3em;
+  display:inline-block;
+  color:white;
+  padding:0px 20px;
+  transition:background 0.5s;
+  -webkit-transition:background 0.5s, border 0.5s;
+}
+
+.menu ul li a:hover {
+  background-color:#73b360;
+}
+.menu ul li a:active, .menu ul li a.active {
+  background-color:rgba(174,25,25,1);
+}
+.menu ul li a.disabled {
+  color:#444;
+  cursor:default;
+}
+.menu ul li a.disabled:hover {
+  background-color:transparent;
+}
+
+
+div.content {
+  background:#fafafa;
+  padding:10em 0px;
+  margin:0px auto;
+  width:100%;
+  text-align:justify;
+  line-height: 1.5em;
+}
+div.content:nth-child(2n+1) {
+  background:#eee;
+  color:#111;
+}
+
+div.content>div {
+    margin:0px auto;
+    width:70%;
+    max-width:760px;    
+}
+#footer {
+  clear:both;
+  margin:0;
+  padding:30px;
+  border-top: 1px solid rgba(143,20,20,1);
+  position:relative;
+  background-color: rgba(227,62,62,1);
+  color:#fafafa;
+  text-align: center;
+}
+
+#footer::before {
+  background: rgba(174,25,25,1);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+}
