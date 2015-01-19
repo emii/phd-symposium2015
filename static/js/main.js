@@ -28,9 +28,8 @@ $(document).ready(function() {
       $(".menu a").removeClass("active");
       $("#aabout").addClass("active");
     }
-    /*else if ($(document).scrollTop() - $("#home").offset().top > -200) {
+    else  {
       $(".menu a").removeClass("active");
-      $("#ahome").addClass("active");
-    }*/
+    }
   });
 });
