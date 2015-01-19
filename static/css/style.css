@@ -25,7 +25,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    height:100%;
+    height:calc(100% - 3em);
     top: 0;
     left: 0;
     z-index: -1;
@@ -128,7 +128,7 @@
 
 #my_fixable_header{
     position: absolute;
-    top:100%;
+    top:calc(100% - 3em);
     left:0;
     background-color: rgba(174, 24, 24, 1);
     margin: 0;
