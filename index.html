@@ -147,9 +147,9 @@ var w = window,
 
 //background
 var width = 2000,
-    height = 900;
+    height = window.screen.availHeight;
 
-var sample = uniformRandomSampler(width, height, 1.2*2500),
+var sample = uniformRandomSampler(width, height, 3*height),
     samples = [],
     s;
 

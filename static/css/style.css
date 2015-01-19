@@ -30,18 +30,21 @@
     left: 0;
     z-index: -1;
     background-color: rgba(0, 103, 103, 1);
-    min-height:500px;
+    min-height:540px;
 }
 
 #title-wrapper{
     position:absolute;
     width: 90%;
-    margin: 130px auto;
-    padding: 25px;
+/*    padding: 25px;*/
     text-align: right;
     font-size: 65px;
     font-family: Questrial;
     z-index: 1;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 }
 
 #logo{
@@ -54,6 +57,10 @@
     z-index: 1; 
     opacity:0.7;
     overflow:hidden;  
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 }
 
 
