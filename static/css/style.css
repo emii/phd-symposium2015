@@ -1,69 +1,115 @@
 
 @import url(http://fonts.googleapis.com/css?family=Questrial);
 
-#body{
-    background-color: #000;
+html {
+	height: 100%;
+}
+
+body{
+    background-color: #FFF;
     margin: 0;
     padding:0;
-
-
+    height: 100%;
 }
-#container{
-    width: 100%;
-    position: absolute;
-    margin:0;
-    top:100%;
+
+#logo{
+	width: 550px;
+	height: 540px;
+    top:10px;
+    left: 30px;
+    padding: 0;
+    text-align: right;
+    max-width: 100%;
+}
+	
+#title-wrapper {
+	width: 90%;
+    text-align: right;
+    font-size: 65px;
+    font-family: Questrial;
+    z-index: 1;
+}	
+
+#container {
+	width: 100%;
     left:0;
     padding: 0;
     background-color: #eee;
     display: block;
     font-family: Questrial;
+    position: relative;
 }
 
-#header-wrapper{
-    position: absolute;
+#header-wrapper {
     width: 100%;
     padding: 0;
-    margin: 0;
-    height:calc(100% - 3em);
     top: 0;
     left: 0;
     z-index: -1;
     background-color: rgba(0, 103, 103, 1);
-    min-height:540px;
+    min-height:calc(100% - 3em);
+
 }
 
-#title-wrapper{
-    position:absolute;
-    width: 90%;
-/*    padding: 25px;*/
-    text-align: right;
-    font-size: 65px;
-    font-family: Questrial;
-    z-index: 1;
-	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
+#header-background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+	min-height: inherit;
+}	
+
+@media(max-width: 1100px) {
+	#logo{
+	    position:static;
+	    opacity:0.7;
+		top: 1em;
+		transform: none;
+		-webkit-transform: none;
+		-ms-transform: none;
+	}
+	#title-wrapper {
+	    position: relative;
+	    margin-top: -1.5em;
+	    padding-bottom: 0.5em;
+		transform: none;
+		-webkit-transform: none;
+		-ms-transform: none;
+	}
+	
+	
+	#header-wrapper{
+	    position: relative;
+	}
+
+
 }
 
-#logo{
+@media(min-width: 1100px) {
+	#logo{
+	    position:absolute;
+	    z-index: 1; 
+	    opacity:0.7;
+		top: 50%;
+		margin-top: -25%;
+	}
+		
+	#title-wrapper{
+	    position:absolute;
+		top: 45%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+	}
+	
+	#header-wrapper{
+	    position: static;
+	    height: calc(100% - 3em);
+	    min-height: 540px;
+	}
 
-    position:absolute;
-    top:10px;
-    left: 30px;
-    padding: 0;
-    text-align: right;
-    z-index: 1; 
-    opacity:0.7;
-    overflow:hidden;  
-	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
+
 }
-
-
 
 #title{
     
@@ -99,8 +145,6 @@
 }
 
 #subtitle{
-    
-    
     padding: 10px;
     text-align: right;
     font-size: 30px;
@@ -115,7 +159,7 @@
     margin: 0;
     padding: 0px;
     color: #333;
-    overflow: hidden;
+/*     overflow: hidden; */
 }
 
 #home{
@@ -127,13 +171,15 @@
 }
 
 #my_fixable_header{
-    position: absolute;
-    top:calc(100% - 3em);
+/* 	visibility: hidden; */
+    position: relative;
+    top:0;
     left:0;
     background-color: rgba(174, 24, 24, 1);
     margin: 0;
     padding:0;
     display: block;
+    clear: none;
     width: 100%;
     border: 0;
     opacity: 1;
@@ -164,7 +210,7 @@
 .menu::after {
   background: rgba(227, 61, 61, 0.9);
   content: "";
-  position: absolute;
+/*   position: absolute; */
   top: 3em;
   left: 0;
   width: 100%;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <link rel="stylesheet" type="text/css" href="static/css/style.css" />
 <script src="static/js/d3.min.js"></script>
@@ -11,7 +12,7 @@
 
 <div id="header-wrapper">
 <div id="logo">
-        <object data="static/media/images/logo_4_code.svg" type="image/svg+xml"></object>
+        <object data="static/media/images/logo_4_code.svg" type="image/svg+xml" width="100%"></object>
     </div>
     
     <div id="title-wrapper">
@@ -147,7 +148,7 @@ var w = window,
 
 //background
 var width = 2000,
-    height = Math.max(window.screen.availHeight, window.screen.availWidth);
+    height = Math.max(window.screen.availHeight, window.screen.availWidth) * window.devicePixelRatio;
 
 var sample = uniformRandomSampler(width, height, 3*height),
     samples = [],
@@ -163,10 +164,8 @@ var color = d3.scale.cubehelix()
     .range([d3.hsl(180, 1, .5), d3.hsl(180, 0, 0)])
     .clamp(true);
 
-d3.select("#header-wrapper").append("svg")
-    .attr("width", "100%")
-    .attr("height", "100%")
-    .style("position","absolute")
+d3.select("#header-wrapper").insert("svg", ":first-child")
+    .attr("id", "header-background")
   .selectAll("path")
     .data(voronoi(samples))
   .enter().append("path")
@@ -274,8 +273,8 @@ $(window).scroll(function(){
     else {
         //myHeader.removeClass('fixed');
         myHeader.data( 'position', myHeader.position() );//ensures position assignment upon window risizing
-        $('#my_fixable_header').css("position", "absolute");
-        $('#my_fixable_header').css("top", "calc(100% - 3em)"); 
+        $('#my_fixable_header').css("position", "relative");
+        $('#my_fixable_header').css("top", "0"); 
         //$('#mainContainer').css("margin","50px auto 0;");
     }
     
