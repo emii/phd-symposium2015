@@ -5,7 +5,8 @@
 <link rel="stylesheet" type="text/css" href="static/css/style.css" />
 <script src="static/js/d3.min.js"></script>
 <script src="static/js/cubehelix.min.js"></script>
-<script src="static/js/jquery-1.7.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="static/js/jquery.sticky.js"></script>
 <script src="static/js/main.js"></script>
 </head>
 <body>
@@ -250,67 +251,11 @@ d3.select("svg").selectAll("circle")
 
 
 jQuery(document).ready(function(){
-
-var myHeader = $('#my_fixable_header');
-myHeader.data( 'position', myHeader.position() );
-$(window).scroll(function(){
-
-    var hPos = myHeader.data('position'),
-        //contPos = $('#my_fixable_header').data('position'),
-        scroll = getScroll();
-
-    //$('#header-wrapper').css("-webkit-transform","translateY("+ (scroll.top/3) +"px)");//paralax
-    //$('#title-wrapper').css("-webkit-transform","translateY("+ (scroll.top/10) +"px)");//paralax
-    $('#my_fixable_header').css("box-shadow", "0 5px 10px 0 #bbb");
-    if ( hPos.top < scroll.top ){
-        //myHeader.addClass('fixed');
-        $('#my_fixable_header').css("position", "fixed");
-        $('#my_fixable_header').css("top", "0");
-        //$('#my_fixable_header').css("left", "0");
-        //$('#my_fixable_header').css("box-shadow", "0 5px 10px 0 #bbb");
-        //$('#mainContainer').css("margin","margin: 5px auto;");
-    }
-    else {
-        //myHeader.removeClass('fixed');
-        myHeader.data( 'position', myHeader.position() );//ensures position assignment upon window risizing
-        $('#my_fixable_header').css("position", "relative");
-        $('#my_fixable_header').css("top", "0"); 
-        //$('#mainContainer').css("margin","50px auto 0;");
-    }
-    
-    //if (scroll.top < 600) {
-      //$('#my_fixable_header').css("opacity", (scroll.top * 0.005) );
-      //$('#header').css("opacity", ( 1- (scroll.top * 0.005)) );
-       //$('#nav').css("opacity", ( 1- (scroll.top * 0.005)) );
-      //$('#header-wrapper').css("background-color","rgba(204,255,0," + (scroll.top * 0.005) + ")");
-    //} else {
-      //$('#my_fixable_header').css("opacity", 1);
-        //$('#header-wrapper').css("background-color","rgba(204,255,0,1)");
-    //}
-   
-    
-    //if ( scroll.top == 0 ){
-        //$('#my_fixable_header').css("box-shadow", "none");
-        //$('#my_fixable_header').css("opacity", 0);
-        //$('#header').css("opacity", 1 );
-       //$('#nav').css("opacity", 1 );
-        //$('#header-wrapper').css("background-color","#fafafa");
-    //}
-    
-    
-    
+	var nav = $('#my_fixable_header');
+	nav.sticky({topSpacing: 0, responsiveWidth: true, center: true, getWidthFrom: 'body', wrapperClassName: 'nav-wrapper'});
+	$('.nav-wrapper').css("width", "100%");
 });
 
-function getScroll () {
-    var b = document.body;
-    var e = document.documentElement;
-    return {
-        left: parseFloat( window.pageXOffset || b.scrollLeft || e.scrollLeft ),
-        top: parseFloat( window.pageYOffset || b.scrollTop || e.scrollTop )
-    };
-}
-    
-});
 //end of fixed header
 
 

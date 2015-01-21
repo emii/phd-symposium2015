@@ -193,8 +193,11 @@ body{
 
 .fixed {
     top:0;
-    left:0;
     position:fixed;
+}
+
+.nav-wrapper {
+	width: 100%;
 }
 
 
