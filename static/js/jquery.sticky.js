@@ -70,8 +70,9 @@
       }
     },
     resizer = function() {
+	  scroller()
       windowHeight = $window.height();
-
+	  
       for (var i = 0; i < sticked.length; i++) {
         var s = sticked[i];
         if (typeof s.getWidthFrom !== 'undefined' && s.responsiveWidth === true) {
