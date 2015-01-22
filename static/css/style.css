@@ -200,7 +200,7 @@
 }
 
 .menu ul li a:hover {
-  background-color:#73b360;
+  background-color:rgba(250,183,0,1);
 }
 .menu ul li a:active, .menu ul li a.active {
   background-color:rgba(174,25,25,1);
