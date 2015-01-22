@@ -12,8 +12,8 @@
 <body>
 
 <div id="header-wrapper">
-<div id="logo">
-        <object data="static/media/images/logo_4_code.svg" type="image/svg+xml" width="100%"></object>
+<div id="logo-container">
+        <object data="static/media/images/logo_4_code.svg" type="image/svg+xml" id="logo"></object>
     </div>
     
     <div id="title-wrapper">
@@ -21,9 +21,9 @@
         <div id="title">Just by Chance?</div>
         <div id="subtitle">Randomness &amp; Variability Shaping Biology</div>
         <div id="dates">
-			22nd–24th October, 2015<br/>
-			Heidelberg, Germany
-		</div>
+            22nd–24th October, 2015<br/>
+            Heidelberg, Germany
+        </div>
     </div>
 </div>
 <div id="my_fixable_header">
@@ -38,33 +38,28 @@
     
     
     <div id="mainContent">
-       <div class="content"  id="about">      
-          <div>
-            <div>
+       <div class="content"  id="about">
+           <div>
+            <div>      
             <h1>About the Symposium</h1>
             <p>The aim of this year's symposium is to explore the importance of randomness and variability in biology. To survive and thrive, living systems must robustly maintain their internal organization, yet remain flexible to respond and adapt to the challenges of a dynamic environment. The balance between these opposing requirements shapes biological systems across all scales, from molecules to ecosystems. We seek to bring together leading scientists that tackle this subject from different perspectives, enabling an exchange of ideas and inspiring young researchers to see biological systems from a new point of view.</p>
-            
             </div>
           </div>
         </div>
-        <div class="content"  id="speakers">      
-          <div>
+        <div class="content"  id="speakers">
             <div>
+            <div>      
             <h1>Speakers</h1>
             <h2>To be announced.</h2>
-            <p>Bacon ipsum dolor amet prosciutto shoulder ball tip, tongue filet mignon turducken porchetta landjaeger fatback strip steak salami chuck pork chop. Sausage venison flank fatback pork loin. Flank ball tip capicola tenderloin, pig turducken cow beef bacon. T-bone ground round doner, pastrami andouille pancetta pork pork belly ham fatback frankfurter bresaola pork loin porchetta shank.</p>
-
-            <p>Doner fatback corned beef, t-bone shankle bacon meatloaf biltong. Beef ribs bresaola jowl, cupim pancetta short loin tail capicola porchetta ribeye sausage short ribs. Tenderloin pig pork, prosciutto short ribs pork loin corned beef chuck kevin t-bone doner jowl alcatra salami tri-tip. Brisket sausage chuck, jerky turducken filet mignon pig ham hock prosciutto meatloaf chicken shoulder shank hamburger ball tip. Swine beef ribs corned beef, boudin filet mignon strip steak cow jerky turkey pork bacon frankfurter. Tenderloin prosciutto picanha, sirloin hamburger t-bone meatball shankle biltong drumstick tail frankfurter strip steak jowl boudin. Doner turducken boudin pastrami, drumstick meatloaf beef jerky rump chuck filet mignon pork.</p>
+            <p>Currently we are still in the process of inviting speakers.</p>
             </div>
           </div>
         </div>
-        <div class="content"  id="programme">      
-          <div>
+        <div class="content"  id="programme">
             <div>
-            <h1>To be announced</h1>
-            <p>Bacon ipsum dolor amet prosciutto shoulder ball tip, tongue filet mignon turducken porchetta landjaeger fatback strip steak salami chuck pork chop. Sausage venison flank fatback pork loin. Flank ball tip capicola tenderloin, pig turducken cow beef bacon. T-bone ground round doner, pastrami andouille pancetta pork pork belly ham fatback frankfurter bresaola pork loin porchetta shank.</p>
-
-            <p>Doner fatback corned beef, t-bone shankle bacon meatloaf biltong. Beef ribs bresaola jowl, cupim pancetta short loin tail capicola porchetta ribeye sausage short ribs. Tenderloin pig pork, prosciutto short ribs pork loin corned beef chuck kevin t-bone doner jowl alcatra salami tri-tip. Brisket sausage chuck, jerky turducken filet mignon pig ham hock prosciutto meatloaf chicken shoulder shank hamburger ball tip. Swine beef ribs corned beef, boudin filet mignon strip steak cow jerky turkey pork bacon frankfurter. Tenderloin prosciutto picanha, sirloin hamburger t-bone meatball shankle biltong drumstick tail frankfurter strip steak jowl boudin. Doner turducken boudin pastrami, drumstick meatloaf beef jerky rump chuck filet mignon pork.</p>
+            <div>      
+            <h1>Programme</h1>
+            <p>The symposium will be held on two days, featuring many fascinating research talks as well as black-board discussions with the speakers, engaging workshops led by companies experienced in the life science field and plenty of opportunities to meet with your friends and colleagues over a coffee to discuss and share your thoughts.</p>
             </div>
           </div>
         </div>
@@ -251,9 +246,9 @@ d3.select("svg").selectAll("circle")
 
 
 jQuery(document).ready(function(){
-	var nav = $('#my_fixable_header');
-	nav.sticky({topSpacing: 0, responsiveWidth: true, center: true, getWidthFrom: 'body', wrapperClassName: 'nav-wrapper'});
-	$('.nav-wrapper').css("width", "100%");
+    var nav = $('#my_fixable_header');
+    nav.sticky({topSpacing: 0, responsiveWidth: true, center: true, getWidthFrom: 'body', wrapperClassName: 'nav-wrapper'});
+    $('.nav-wrapper').css("width", "100%");
 });
 
 //end of fixed header

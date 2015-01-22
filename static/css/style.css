@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Questrial);
 
 html {
-	height: 100%;
+    height: 100%;
 }
 
 body{
@@ -12,26 +12,28 @@ body{
     height: 100%;
 }
 
-#logo{
-	width: 550px;
-	height: 540px;
+#logo-container{
+    width: 100%;
     top:10px;
     left: 30px;
     padding: 0;
     text-align: right;
-    max-width: 100%;
+    max-width: 550px;
 }
-	
+
+#logo {
+    width: 100%;
+}
+    
 #title-wrapper {
-	width: 90%;
+    width: 90%;
     text-align: right;
-    font-size: 65px;
     font-family: Questrial;
     z-index: 1;
-}	
+}   
 
 #container {
-	width: 100%;
+    width: 100%;
     left:0;
     padding: 0;
     background-color: #eee;
@@ -52,63 +54,77 @@ body{
 }
 
 #header-background {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 0;
-	min-height: inherit;
-}	
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    min-height: inherit;
+}   
 
 @media(max-width: 1100px) {
-	#logo{
-	    position:static;
-	    opacity:0.7;
-		top: 1em;
-		transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-	}
-	#title-wrapper {
-	    position: relative;
-	    margin-top: -1.5em;
-	    padding-bottom: 0.5em;
-		transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-	}
-	
-	
-	#header-wrapper{
-	    position: relative;
-	}
+    #logo-container{
+        position:static;
+        opacity:0.7;
+        top: 1em;
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    #title-wrapper {
+        position: relative;
+        margin-top: -2em;
+        padding-bottom: 0.5em;
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+    }
+    
+    
+    #header-wrapper{
+        position: relative;
+    }
 
 
 }
 
 @media(min-width: 1100px) {
-	#logo{
-	    position:absolute;
-	    z-index: 1; 
-	    opacity:0.7;
-		top: 50%;
-		margin-top: -25%;
-	}
-		
-	#title-wrapper{
-	    position:absolute;
-		top: 45%;
-		transform: translateY(-50%);
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-	}
-	
-	#header-wrapper{
-	    position: static;
-	    height: calc(100% - 3em);
-	    min-height: 540px;
-	}
+    #logo-container{
+        position:absolute;
+        z-index: 1; 
+        opacity:0.7;
+        top: calc(50% - 275px);
+    }
+        
+    #title-wrapper{
+        position:absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+    }
+    
+    #header-wrapper{
+        position: static;
+        height: calc(100% - 3em);
+        min-height: 540px;
+    }
 
 
+}
+
+@media(max-width: 800px) {
+    #title-wrapper {
+        font-size: 0.8em;
+    }
+}
+
+@media(max-width: 600px) {
+    #title-wrapper {
+        font-size: 0.6em;
+    }
 }
 
 #title{
@@ -116,7 +132,7 @@ body{
     
     padding: 5px 10px 5px;
     text-align: right;
-    font-size: 80px;
+    font-size: 5em;
     font-family: Questrial;
     z-index: 1;
     
@@ -127,7 +143,7 @@ body{
     
     padding: 5px 10px;
     text-align: right;
-    font-size: 30px;
+    font-size: 1.86em;
     font-family: Questrial;
     z-index: 1;
     
@@ -138,7 +154,7 @@ body{
     
     padding: 0px 10px;
     text-align: right;
-    font-size: 45px;
+    font-size: 2.8em;
     font-family: Questrial;
     z-index: 1;
     color:rgba(250,183,0,1);
@@ -147,7 +163,7 @@ body{
 #subtitle{
     padding: 10px;
     text-align: right;
-    font-size: 30px;
+    font-size: 1.86em;
     font-family: Questrial;
     z-index: 1;
     color:rgba(250,183,0,1);
@@ -171,7 +187,7 @@ body{
 }
 
 #my_fixable_header{
-/* 	visibility: hidden; */
+/*  visibility: hidden; */
     position: relative;
     top:0;
     left:0;
@@ -187,7 +203,7 @@ body{
     height:3em;
     z-index: 2;
     font-family: Questrial;
-	
+    
 }
 
 
@@ -197,7 +213,7 @@ body{
 }
 
 .nav-wrapper {
-	width: 100%;
+    width: 100%;
 }
 
 
@@ -274,10 +290,10 @@ body{
 
 div.content {
   background:#fafafa;
-  padding:10em 0px;
+  padding:8em 0px;
   margin:0px auto;
   width:100%;
-  text-align:justify;
+  text-align:left;
   line-height: 1.5em;
 }
 div.content:nth-child(2n+1) {
