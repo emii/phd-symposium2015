@@ -189,48 +189,55 @@
             </div><!--end of footer-->
         </div><!--end of Container-->
         <script type="text/javascript">
+            //viewport
+            var w = window,
+                d = document,
+                e = d.documentElement,
+                g = d.getElementsByTagName('body')[0],
+                x = w.innerWidth || e.clientWidth || g.clientWidth,
+                y = w.innerHeight || e.clientHeight || g.clientHeight;
 
-        //viewport
-        var w = window,
-        d = document,
-        e = d.documentElement,
-        g = d.getElementsByTagName('body')[0],
-        x = w.innerWidth || e.clientWidth || g.clientWidth,
-        y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+            //background
+            var width = 2000,
+                height = Math.max(window.screen.availHeight, window.screen.availWidth) * window.devicePixelRatio;
 
-        //background
-        var width = 2000,
-        height = Math.max(window.screen.availHeight, window.screen.availWidth) * window.devicePixelRatio;
+            var sample = uniformRandomSampler(width, height, 3 * height),
+                samples = [],
+                s;
 
-        var sample = uniformRandomSampler(width, height, 3*height),
-        samples = [],
-        s;
+            while (s = sample()) samples.push(s);
 
-        while (s = sample()) samples.push(s);
+            var voronoi = d3.geom.voronoi()
+                .clipExtent([
+                    [0, 0],
+                    [width, height]
+                ]); // TODO overdraw
 
-        var voronoi = d3.geom.voronoi()
-        .clipExtent([[0, 0], [width, height]]); // TODO overdraw
+            var color = d3.scale.cubehelix()
+                .domain([0, 5000])
+                .range([d3.hsl(180, 1, .5), d3.hsl(180, 0, 0)])
+                .clamp(true);
 
-        var color = d3.scale.cubehelix()
-        .domain([0, 5000])
-        .range([d3.hsl(180, 1, .5), d3.hsl(180, 0, 0)])
-        .clamp(true);
+            d3.select("#header-wrapper").insert("svg", ":first-child")
+                .attr("id", "header-background")
+                .selectAll("path")
+                .data(voronoi(samples))
+                .enter().append("path")
+                .style("fill", function(d) {
+                    return color(d3.geom.polygon(d).area());
+                })
+                .attr("d", function(d) {
+                    return "M" + d.join("L") + "Z";
+                });
 
-        d3.select("#header-wrapper").insert("svg", ":first-child")
-        .attr("id", "header-background")
-        .selectAll("path")
-        .data(voronoi(samples))
-        .enter().append("path")
-        .style("fill", function(d) { return color(d3.geom.polygon(d).area()); })
-        .attr("d", function(d) { return "M" + d.join("L") + "Z"; });
+            function uniformRandomSampler(width, height, numSamplesMax) {
+                var numSamples = 0;
+                return function() {
+                    if (++numSamples > numSamplesMax) return;
+                    return [Math.random() * width, Math.random() * height];
+                };
+            };
 
-        function uniformRandomSampler(width, height, numSamplesMax) {
-        var numSamples = 0;
-        return function() {
-        if (++numSamples > numSamplesMax) return;
-        return [Math.random() * width, Math.random() * height];
-        };
-        };
 
 
         /*
