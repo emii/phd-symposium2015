@@ -198,8 +198,8 @@
                 y = w.innerHeight || e.clientHeight || g.clientHeight;
 
             //background
-            var width = 2000,
-                height = Math.max(window.screen.availHeight, window.screen.availWidth) * window.devicePixelRatio;
+            var width = Math.max(window.screen.availHeight, window.screen.availWidth) * window.devicePixelRatio + 500,
+                height = Math.max(window.screen.availHeight, window.screen.availWidth) * window.devicePixelRatio + 500;
 
             var sample = uniformRandomSampler(width, height, 3 * height),
                 samples = [],
