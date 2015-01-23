@@ -222,14 +222,15 @@ body {
 }
 
 
-.menu {
+nav {
     text-align: center;
     background: url('../img/logo_50px.png') center left no-repeat,
     url('../img/sponsors/EMBLw.png') center right no-repeat;
     background-size: contain, contain;
+    padding: 0 120px 0 120px;
 }
 
-.menu::after {
+nav::after {
     background: rgba(227, 61, 61, 0.9);
     content: "";
     /*   position: absolute; */
@@ -241,7 +242,7 @@ body {
 }
 
 
-.menu ul {
+nav ul {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
@@ -249,7 +250,7 @@ body {
     /*width:60em;*/
 }
 
-.menu ul li {
+nav ul li {
     display: inline-block;
     margin: 0px;
     padding: 0px;
@@ -258,11 +259,11 @@ body {
     /*border-left:1px solid rgba(227,62,62,0.9); */
 }
 
-.menu ul li:last-child {
+nav ul li:last-child {
     /*border-right:1px solid rgba(227,62,62,0.9);*/
 }
 
-.menu ul li a {
+nav ul li a {
     background-color: rgba(174, 24, 24, 0.9);
     text-decoration: none;
     font-size: 1em;
@@ -275,20 +276,71 @@ body {
     -webkit-transition: background 0.5s, border 0.5s;
 }
 
-.menu ul li a:hover {
+nav ul li a:hover {
     background-color: rgba(227, 61, 61, 0.5);
 }
-.menu ul li a:active, .menu ul li a.active {
+nav ul li a:active, nav ul li a.active {
     background-color: rgba(227, 61, 61, 1);
 }
-.menu ul li a.disabled {
+nav ul li a.disabled {
     color: #454545;
     cursor: default;
 }
-.menu ul li a.disabled:hover {
+nav ul li a.disabled:hover {
     background-color: transparent;
 }
 
+#social-media {
+	float: left;
+	left: 0;	
+}
+
+#embl {
+	float: right;
+	right: 0;
+}
+
+.external-header-links {
+	height: 3em;
+	position: absolute;
+	top: 0;
+}
+
+.external-header-links * {
+	height: inherit;
+}
+
+.external-header-links ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	padding: 0 0.5em 0 0.5em;
+}
+
+.external-header-links ul li {
+	display: inline-block;
+	padding: 0 0.5em 0 0.5em;
+}
+
+#social-media ul li {
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px
+}
+
+#embl ul li {
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px
+}
+
+.social-media-button img {
+	height: calc(100% - 20px);
+}
+
+.embl-button > img {
+	height: calc(100% - 10px);
+}
 
 div.content {
     background: #fafafa;
@@ -308,7 +360,7 @@ div.content>div {
     width: 70%;
     max-width: 760px;
 }
-#footer {
+footer {
     clear: both;
     margin: 0;
     padding: 30px;
@@ -319,7 +371,7 @@ div.content>div {
     text-align: center;
 }
 
-#footer::before {
+footer::before {
     background: rgba(174,25,25,1);
     content: "";
     position: absolute;
