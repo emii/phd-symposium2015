@@ -139,7 +139,6 @@ body {
     #title-wrapper {
         font-size: 0.6em;
     }
-
 }
 
 #title {
@@ -340,6 +339,34 @@ nav ul li a.disabled:hover {
 
 .embl-button > img {
 	height: calc(100% - 10px);
+}
+
+@media(max-width: 425px) {
+    .social-media-button img {
+		height: calc(100% - 30px);
+	}
+	
+	.embl-button > img {
+		height: calc(100% - 20px);
+	}
+	
+	#social-media ul li {
+		padding-top: 15px;
+		padding-bottom: 15px
+	}
+
+	#embl ul li {
+		padding-top: 10px;
+		padding-bottom: 10px
+	}
+	
+	.external-header-links ul {
+		padding: 0 0.25em 0 0.25em;
+	}
+	
+	.external-header-links ul li {
+		padding: 0 0.25em 0 0.25em;
+	}
 }
 
 div.content {
