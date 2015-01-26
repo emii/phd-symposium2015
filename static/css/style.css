@@ -244,7 +244,7 @@ nav ul {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
-    height: 3em;
+    height: inherit;
     /*width:60em;*/
 }
 
@@ -253,7 +253,7 @@ nav ul li {
     margin: 0px;
     padding: 0px;
     /*float:left;*/
-    height:3em;
+/*     height:3em; */
     /*border-left:1px solid rgba(227,62,62,0.9); */
 }
 
@@ -277,7 +277,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgba(227, 61, 61, 0.5);
 }
-nav ul li a:active, nav ul li a.active {
+nav ul li a.active {
     background-color: rgba(227, 61, 61, 1);
 }
 nav ul li a.disabled {
@@ -286,6 +286,34 @@ nav ul li a.disabled {
 }
 nav ul li a.disabled:hover {
     background-color: transparent;
+}
+
+@media(max-width: 1050px) {
+	nav {
+	    text-align: center;
+	    background-size: contain, contain;
+	    padding: 0 80px 0 80px;
+	}
+		
+	nav ul li {
+		width: 0;
+		height: 0;
+		visibility: collapse;
+	}
+	
+	nav ul li.active {
+		width: auto;
+		height: auto;
+		visibility: visible;
+	}
+	
+	nav ul li a.active {
+		background-color:  rgba(174, 24, 24, 0.9);
+	}
+	
+	nav ul li a:hover {
+		
+	}
 }
 
 #social-media {
@@ -299,7 +327,7 @@ nav ul li a.disabled:hover {
 }
 
 .external-header-links {
-	height: 3em;
+	height: inherit;
 	position: absolute;
 	top: 0;
 }
@@ -322,41 +350,27 @@ nav ul li a.disabled:hover {
 
 #social-media ul li {
 	display: inline-block;
-	padding-top: 10px;
-	padding-bottom: 10px
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
 }
 
 #embl ul li {
 	display: inline-block;
-	padding-top: 5px;
-	padding-bottom: 5px
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 .social-media-button img {
-	height: calc(100% - 20px);
-}
-
+		height: calc(100% - 1.2em);
+	}
+	
 .embl-button > img {
-	height: calc(100% - 10px);
+		height: calc(100% - 1em);
 }
 
 @media(max-width: 425px) {
-    .social-media-button img {
-		height: calc(100% - 30px);
-	}
-	
-	.embl-button > img {
-		height: calc(100% - 20px);
-	}
-	
-	#social-media ul li {
-		padding-top: 15px;
-		padding-bottom: 15px
-	}
-
-	#embl ul li {
-		padding-top: 10px;
-		padding-bottom: 10px
+	#my_fixable_header {
+		height: 2.5em;
 	}
 	
 	.external-header-links ul {
@@ -366,6 +380,13 @@ nav ul li a.disabled:hover {
 	.external-header-links ul li {
 		padding: 0 0.25em 0 0.25em;
 	}
+	
+	nav ul li a {
+		font-size: 0.9em;
+		line-height: 2.78em;
+	}
+	
+
 }
 
 #down {
