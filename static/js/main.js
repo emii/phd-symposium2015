@@ -1,13 +1,31 @@
 $(document).ready(function() {
-	var reset_active = function() {
-		$("nav a").removeClass("active");
-		$("nav li").removeClass("active");
-	};
-	
-	var set_active = function(active) {
-		$("#a" + active).addClass("active");
-		$("#l" + active).addClass("active");
-	}
+    $('html').click(function() {
+        $('nav').removeClass('show');
+    });
+    
+    $('nav ul').click(function(e){ 
+        e.stopPropagation();
+    });
+    
+    $('nav ul li a').click(function(e){
+        if ($('nav').hasClass('show')) {
+            $('nav').removeClass('show');
+        }
+        else {
+            $('nav').addClass('show');
+            e.preventDefault();
+        }
+    });  
+  
+    var reset_active = function() {
+        $("nav a").removeClass("active");
+        $("nav li").removeClass("active");
+    };
+    
+    var set_active = function(active) {
+        $("#a" + active).addClass("active");
+        $("#l" + active).addClass("active");
+    }
       
   $(document).scroll(function(){
     if ($(document).scrollTop() - $("#contact").offset().top > -200) {

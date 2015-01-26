@@ -262,7 +262,6 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-    background-color: rgba(174, 24, 24, 0.9);
     text-decoration: none;
     font-size: 1em;
     margin: 0px;
@@ -308,12 +307,23 @@ nav ul li a.disabled:hover {
 	}
 	
 	nav ul li a.active {
-		background-color:  rgba(174, 24, 24, 0.9);
+		background-color:  transparent;
+	}
+
+	nav.show ul {
+	    width: 10em;
+		background-color: rgba(174, 24, 24, 0.9);
 	}
 	
-	nav ul li a:hover {
-		
+	nav.show ul li {
+		width: 10em;
+		height: auto;
+		visibility: visible;
+		display: block;
+		margin-left: calc(50% - 5em);
 	}
+
+
 }
 
 #social-media {
