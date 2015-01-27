@@ -291,6 +291,9 @@ nav ul li a.disabled:hover {
 	nav {
 	    text-align: center;
 	    background-size: contain, contain;
+	    /* If you change this, then you also need to change the value for 
+    	    "if ($("nav").css("padding-left") == "80px") {" in main.js
+    	    This is a bit of a hack. */
 	    padding: 0 80px 0 80px;
 	}
 		
