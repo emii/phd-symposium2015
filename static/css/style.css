@@ -342,6 +342,10 @@ nav ul li a.disabled:hover {
 	top: 0;
 }
 
+.external-header-links ul li:hover {
+    background-color: rgba(227, 61, 61, 0.5);
+}
+
 .external-header-links * {
 	height: inherit;
 }
@@ -356,6 +360,8 @@ nav ul li a.disabled:hover {
 .external-header-links ul li {
 	display: inline-block;
 	padding: 0 0.5em 0 0.5em;
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s, border 0.5s;
 }
 
 #social-media ul li {
