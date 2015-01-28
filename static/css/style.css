@@ -373,6 +373,7 @@ nav ul li a.disabled:hover {
 #social-media ul li {
 	display: inline-block;
 	padding-top: 0.6em;
+	padding-bottom: 0.6em;
 	height: calc(100% - 1.2em);
 }
 
