@@ -296,6 +296,9 @@ nav ul li a.disabled:hover {
 	nav {
 	    text-align: center;
 	    background-size: contain, contain;
+	    /* If you change this, then you also need to change the value for 
+    	    "if ($("nav").css("padding-left") == "80px") {" in main.js
+    	    This is a bit of a hack. */
 	    padding: 0 80px 0 80px;
 	}
 		
@@ -347,6 +350,10 @@ nav ul li a.disabled:hover {
 	top: 0;
 }
 
+.external-header-links ul li:hover {
+    background-color: rgba(227, 61, 61, 0.5);
+}
+
 .external-header-links * {
 	height: inherit;
 }
@@ -361,26 +368,28 @@ nav ul li a.disabled:hover {
 .external-header-links ul li {
 	display: inline-block;
 	padding: 0 0.5em 0 0.5em;
+    transition: background 0.5s;
+    -webkit-transition: background 0.5s, border 0.5s;
 }
 
 #social-media ul li {
 	display: inline-block;
 	padding-top: 0.6em;
-	padding-bottom: 0.6em;
+	height: calc(100% - 1.2em);
 }
 
 #embl ul li {
 	display: inline-block;
 	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+	height: calc(100% - 0.5em);
 }
 
 .social-media-button img {
-		height: calc(100% - 1.2em);
+		height: 100%;
 	}
 	
-.embl-button > img {
-		height: calc(100% - 1em);
+.embl-button img {
+		height: 100%;
 }
 
 @media(max-width: 425px) {
