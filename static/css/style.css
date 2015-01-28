@@ -312,6 +312,11 @@ nav ul li a.disabled:hover {
 		height: 0;
 		visibility: collapse;
 	}
+
+  nav ul li a {
+    width: 100%;
+    padding: 0px;
+}
 	
 	nav ul li.active {
 		width: auto;
