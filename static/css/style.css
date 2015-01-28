@@ -34,6 +34,11 @@ body {
 #logo {
     width: 100%;
 }
+
+.shadow {
+    -webkit-filter: drop-shadow( 3px 3px 15px rgba(0, 103, 103, 1) );
+            filter: drop-shadow( 3px 3px 15px rgba(0, 103, 103, 1) ); /* Same syntax as box-shadow */
+}
     
 #title-wrapper {
     width: 90%;
