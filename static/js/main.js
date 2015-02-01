@@ -30,54 +30,68 @@ $(document).ready(function() {
     }
       
   $(document).scroll(function(){
-    if ($(document).scrollTop() - $("#previous").offset().top > -400) {
+    if ($(document).scrollTop() - $("#previous").offset().top > -200) {
       reset_active();
       set_active("contact");
       $("#down").attr("href","#home");
+      $("#down").css("visibility","hidden");
+      $("#up").attr("href","#contact");
     }
     else if ($(document).scrollTop() - $("#contact").offset().top > -200) {
       reset_active();
       set_active("contact");
       $("#down").attr("href","#previous");
+      $("#up").attr("href","#sponsors");
+      $("#down").css("visibility","visible");
     }
     else if ($(document).scrollTop() - $("#sponsors").offset().top > -200) {
       reset_active();
       set_active("sponsors");
       $("#down").attr("href","#contact");
+      $("#up").attr("href","#registration");
     }
     else if ($(document).scrollTop() - $("#registration").offset().top > -200) {
       reset_active();
       set_active("registration");
       $("#down").attr("href","#sponsors");
+      $("#up").attr("href","#travel");
     }
     else if ($(document).scrollTop() - $("#travel").offset().top > -200) {
       reset_active();
       set_active("travel");
       $("#down").attr("href","#registration");
+      $("#up").attr("href","#programme");
     }
     else if ($(document).scrollTop() - $("#programme").offset().top > -200) {
       reset_active();
       set_active("programme");
       $("#down").attr("href","#travel");
+      $("#up").attr("href","#speakers");
     }
     else if ($(document).scrollTop() - $("#speakers").offset().top > -200) {
       reset_active();
       set_active("speakers");
       $("#down").attr("href","#programme");
+      $("#up").attr("href","#about");
     }
     else if ($(document).scrollTop() - $("#about").offset().top > -200) {
       reset_active();
       set_active("about");
       $("#down").attr("href","#speakers");
+      $("#up").attr("href","#home");
+      $("#up").css("visibility","visible");
     }
     else if ($(document).scrollTop() - $("#home").offset().top > -200) {
       reset_active();
       set_active("home");
       $("#down").attr("href","#about");
+      $("#up").css("visibility","hidden");
+      $("#down").css("visibility","visible");
     }
     else  {
       reset_active()
       $("#down").attr("href","#home");
+      $("#down").css("visibility","visible");
     }
   });
 

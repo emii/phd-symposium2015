@@ -57,6 +57,7 @@
     </head>
     <body>
     <a id="home"></a>
+        <!--begin header-wrapper-->
         <div id="header-wrapper">
 	        <div id="header-content">
 	            <div id="logo-container">
@@ -64,13 +65,13 @@
 	                    </object>
 	            </div>
 	            <div id="title-wrapper">
-	                <div id="pretitle">
+	                <div id="pretitle" class="yellow">
 	                    <strong>17th EMBL PhD Symposium</strong>
 	                </div>
 	                <div id="title">
 	                    Just by Chance?
 	                </div>
-	                <div id="subtitle">
+	                <div id="subtitle" class="yellow">
 	                    Randomness &amp; Variability Shaping Biology
 	                </div>
 	                <div id="dates">
@@ -80,6 +81,8 @@
 	            </div>
             </div>
         </div>
+        <!--end header-wrapper-->
+        <!--begin nav-->
         <div id="my_fixable_header">
             <nav>
                 <ul>
@@ -102,10 +105,10 @@
                     </li>
                 </ul>
             </nav>
-            <div id="embl" class="external-header-links">
+            <div id="embl-logo" class="external-header-links">
 	            <ul>
 		            <li>
-		            	<a href="http://www.embl.de/" id="embl" name="EMBL homepage" class="embl-button" target="_blank"><img src="static/media/images/rev_logo.svg" /></a>
+		            	<a href="http://www.embl.de/" id="embl-logo" name="EMBL homepage" class="embl-button" target="_blank"><img src="static/media/images/rev_logo.svg" /></a>
 
 		            </li>
             </div>
@@ -119,8 +122,8 @@
 		            </li>
             </div>
         </div>
-        <!--<div id="container"-->
-            <!--<div id="mainContent">-->
+        <!--end nav-->
+        <!--begin arrows-->
                   <!--<div id="rarr" class="rarr">
                       <div class="arr">
                         &rsaquo;
@@ -131,7 +134,10 @@
                         &lsaquo;
                       </div>
                     </div> -->   
-                    <a id="down" href="#about"><img src="img/menuarr.png" alt="next" /></a>
+                    <a class="secarr" id="up" href="#home"><img src="img/menuarrup.png" alt="next" /></a>
+                    <a class="secarr" id="down" href="#about"><img src="img/menuarrdown.png" alt="next" /></a>
+        <!--end arrows-->
+        <!--begin content-->
                 <div class="content" id="about">
                     <div>
                         <div>
@@ -216,29 +222,29 @@
         <thead>
           <tr>
             <th scope="col"></th>
-            <th><h3>Early Bird</h3></th>
-            <th><h3>Late Registration</h3></th>
+            <th><b>Early Bird</b></th>
+            <th><b>Late Registration</b></th>
           </tr>
         </thead>
       <!-- Table body -->
         <tbody>
-                    <tr>
-            <td><h3>Open until</h3></td>
+            <tr>
+            <td><b>Open until</b></td>
             <td>July 5th, 2015</td>
             <td>September 6th, 2015</td>
           </tr>
           <tr>
-            <td><h3>Academia Fee</h3></td>
+            <td><b>Academia Fee</b></td>
             <td>€120</td>
             <td>€150</td>
           </tr>
           <tr>
-            <td><h3>Industry Fee</h3></td>
+            <td><b>Industry Fee</b></td>
             <td>€200</td>
             <td>€200</td>
           </tr>
                     <tr>
-            <td><h3>Abstract submission  deadline:</h3></td>
+            <td><b>Abstract submission deadline:</b></td>
             <td>July 26th, 2015</td>
           </tr>
         </tbody>
@@ -302,12 +308,14 @@
                         </div>
                     </div>
                 </div>
-            <!--</div>end of mainContent-->
+            <!--end content-->
+            <!--begin footer-->
             <footer>
                 EMBL Heidelberg, Meyerhofstraße 1, 69117 Heidelberg, Germany<br>
                 Copyright ©2015 EMBL PhD students
             </footer><!--end of footer-->
-        <!--</div><end of Container-->
+
+         <!--begin D3.js-->   
         <script type="text/javascript">
             //viewport
             var w = window,
@@ -366,5 +374,6 @@
 
 
         </script>
+        <!--end D3.js-->   
     </body>
 </html>
