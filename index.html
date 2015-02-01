@@ -15,34 +15,48 @@
 
         <meta name="author" content="Emiliano Izquierdo, Matt Jeffreys, Bálint Balázs"/>
         <meta name="description" content="17th EMBL PhD Symposium: Just by Chance? - Randomness and Variability shaping Biology, EMBL Heidelberg, Germany from 22nd to 24th October 2015."/>
-    <meta name="Keywords" content="phd symposium, EMBL symposium, EMBL, symposium, phd, embl phd symposium, randomness biology, variability biology, Heidelberg symposium 2015, symposium october 2015, symposium 2015, advanced training centre, registration, speakers, programme, Heidelberg 2015"/>
-    <meta name="revisit-after" content="7 days"/>
-    <meta name="robots" content="index, follow"/>
-    <meta name="viewport" content="initial-scale=1,user-scalable=yes">
+        <meta name="Keywords" content="phd symposium, EMBL symposium, EMBL, symposium, phd, embl phd symposium, randomness biology, variability biology, Heidelberg symposium 2015, symposium october 2015, symposium 2015, advanced training centre, registration, speakers, programme, Heidelberg 2015"/>
+        <meta name="revisit-after" content="7 days"/>
+        <meta name="robots" content="index, follow"/>
+        <meta name="viewport" content="initial-scale=1,user-scalable=yes">
     
 
 
         <!-- Twitter Card data -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@EMBLPhDSymp">
-        <meta name="twitter:title" content="17th EMBL PhD Symposium: Just by Chance? - randomness and variability shaping biology">
-        <meta name="twitter:description" content="The aim of this year's symposium is to explore the importance of randomness and variability in biology. To survive and thrive, living systems must robustly maintain their internal organization, yet remain flexible to respond and adapt to the challenges of a dynamic environment.">
+        <meta name="twitter:title" content="17th EMBL PhD Symposium: Just by Chance?">
+        <meta name="twitter:description" content="Randomness and Variability Shaping Biology, 22nd to 24th October 2015, EMBL Heidelberg, Germany">
         <meta name="twitter:creator" content="@emiizquierdo">
+
         <!-- Twitter Summary card images must be at least 120x120px -->
-        <meta name="twitter:image" content="http://phdsymposium.embl.org/static/media/images/logo_4_code.svg">
+        <meta name="twitter:image" content="http://phdsymposium.embl.org/img/logo_banner.png">
 
         <!-- Open Graph data -->
-        <meta property="og:title" content="17th EMBL PhD Symposium: Just by Chance? - randomness and variability shaping biology" />
+        <meta property="article:author" content="https://www.facebook.com/emiliano.i" />
+        <meta property="article:publisher" content="https://www.facebook.com/EMBL.PhD.Symposium" />
+        <meta property="og:title" content="17th EMBL PhD Symposium: Just by Chance?" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="http://www.example.com/" />
-        <meta property="og:image" content="http://phdsymposium.embl.org/static/media/images/logo_4_code.svg" />
-        <meta property="og:description" content="The aim of this year's symposium is to explore the importance of randomness and variability in biology. To survive and thrive, living systems must robustly maintain their internal organization, yet remain flexible to respond and adapt to the challenges of a dynamic environment." /> 
+        <meta property="og:url" content="http://phdsymposium.embl.org/" />
+        <meta property="og:image" content="http://phdsymposium.embl.org/img/logo_banner.png" />
+        <meta property="og:description" content="Randomness and Variability Shaping Biology, 22nd to 24th October 2015, EMBL Heidelberg, Germany" /> 
         <meta property="og:site_name" content="17th EMBL PhD Symposium" />
-        <meta property="fb:admins" content="emiliano.i" />
+        <meta property="fb:admins" content="505797953" />
+
+        <!--<script for Google Analytics>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-59073164-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>-->
 
     </head>
     <body>
-
+    <a id="home"></a>
         <div id="header-wrapper">
 	        <div id="header-content">
 	            <div id="logo-container">
@@ -61,7 +75,7 @@
 	                </div>
 	                <div id="dates">
 	                    22nd–24th October, 2015<br>
-	                    Heidelberg, Germany
+	                    EMBL Heidelberg, Germany
 	                </div>
 	            </div>
             </div>
@@ -69,7 +83,9 @@
         <div id="my_fixable_header">
             <nav>
                 <ul>
-                    <li id="labout">
+                    <li id="lhome">
+                        <a href="#home" id="ahome" name="ahome">Home</a>
+                    </li><li id="labout">
                         <a href="#about" id="aabout" name="aabout">About</a>
                     </li><li id="lspeakers">
                         <a href="#speakers" id="aspeakers" name="aspeakers">Speakers</a>
@@ -148,7 +164,7 @@
                                 Programme
                             </h1>
                             <p>
-                                The symposium will be held on two days, featuring many fascinating research talks as well as black-board discussions with the speakers, engaging workshops led by companies experienced in the life science field and plenty of opportunities to meet with your friends and colleagues over a coffee to discuss and share your thoughts.
+                                The symposium will be held on three days, featuring many fascinating research talks as well as black-board discussions with the speakers, engaging workshops led by companies experienced in the life science field and plenty of opportunities to meet with your friends and colleagues over a coffee to discuss and share your thoughts.
                             </p>
                         </div>
                     </div>
@@ -342,17 +358,6 @@
                 };
             };
 
-        //Fixed menu
-
-
-        jQuery(document).ready(function(){
-        var nav = $('#my_fixable_header');
-        nav.sticky({topSpacing: 0, responsiveWidth: true, center: true, getWidthFrom: 'body', wrapperClassName: 'nav-wrapper'});
-        $('.nav-wrapper').css("width", "100%");
-        });
-
-        //end of fixed header
-
 
 
 
@@ -361,15 +366,5 @@
 
 
         </script>
-        <!--<script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-59073164-1', 'auto');
-          ga('send', 'pageview');
-
-        </script>-->
     </body>
 </html>

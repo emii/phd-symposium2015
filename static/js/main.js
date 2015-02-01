@@ -33,7 +33,7 @@ $(document).ready(function() {
     if ($(document).scrollTop() - $("#previous").offset().top > -400) {
       reset_active();
       set_active("contact");
-      $("#down").attr("href","#header-wrapper");
+      $("#down").attr("href","#home");
     }
     else if ($(document).scrollTop() - $("#contact").offset().top > -200) {
       reset_active();
@@ -70,9 +70,18 @@ $(document).ready(function() {
       set_active("about");
       $("#down").attr("href","#speakers");
     }
-    else  {
-      reset_active()
+    else if ($(document).scrollTop() - $("#home").offset().top > -200) {
+      reset_active();
+      set_active("home");
       $("#down").attr("href","#about");
     }
+    else  {
+      reset_active()
+      $("#down").attr("href","#home");
+    }
   });
+
+  var nav = $('#my_fixable_header');
+  nav.sticky({topSpacing: 0, responsiveWidth: true, center: true, getWidthFrom: 'body', wrapperClassName: 'nav-wrapper'});
+  $('.nav-wrapper').css("width", "100%");
 });
