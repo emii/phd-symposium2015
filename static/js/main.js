@@ -98,4 +98,40 @@ $(document).ready(function() {
   var nav = $('#my_fixable_header');
   nav.sticky({topSpacing: 0, responsiveWidth: true, center: true, getWidthFrom: 'body', wrapperClassName: 'nav-wrapper'});
   $('.nav-wrapper').css("width", "100%");
+
+    var $root = $('html, body');
+  
+  function scrollToSub(e) {
+    var href = $.attr(e, 'href');
+    if (href.indexOf("/#")==0) {
+      href=href.substr(1);
+    }
+    history.pushState(null, null, href);
+    $root.animate({
+        scrollTop: $(href).offset().top
+    }, 300, function () {          
+        
+    });
+    return false;
+  }
+  
+  $("a[href*='#']").click(function() {
+    var href = $.attr(this, 'href');
+    //if (href.indexOf("/#")==0) {
+      href=href.substr(href.indexOf("#"));
+    //}
+    history.pushState(null, null, href);
+    $root.animate({
+        scrollTop: $(href).offset().top
+    }, 300, function () {          
+        
+    });
+    return false;
+  });
+
+
+
+
+
+  
 });

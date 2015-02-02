@@ -706,6 +706,60 @@ footer::before {
   border:0;
   text-align:left;
 }
+
+#sponsors div.logos {
+  text-align:center;
+}
+
+.logos a {
+  display:inline-block;
+  padding:2%;
+  border:3px solid transparent;
+  width:40%;
+  line-height:0px;
+}
+.logos a:hover  {
+  border:3px solid #73b360;
+}
+.logos a:active {
+  border:3px solid #e33e3e;
+}
+
+.logos a img {
+  border: 0px;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  margin:0;
+  padding:0;
+}
+
+#atcpartners {
+  text-align:center;
+}
+
+#atcpartners>div>div{
+  height:8em;
+  max-height:116px;
+  position:relative;/*
+  background:yellow;*/
+}
+
+#atcpartners img {
+  height:auto;
+  max-width:178px;
+  border:1px solid #cccccc;
+}
+#founder img {
+  width:48%;
+}
+#corporate img {
+  width:22%;
+}
+#associate img {
+  width:15%;
+}
+
 /*
 .hexagon {
   fill: none;
