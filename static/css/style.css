@@ -309,7 +309,7 @@ nav ul li a.disabled:hover {
 	height: calc(100% - 1.2em);
 }
 
-#embl ul li {
+#embl-logo ul li {
 	display: inline-block;
 	padding-top: 0.5em;
 	height: calc(100% - 0.5em);
