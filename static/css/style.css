@@ -707,9 +707,39 @@ footer::before {
   text-align:left;
 }
 
+#speakers table {
+  width:80%;
+  border-collapse:collapse;
+  margin:2em 0 0 0;
+  padding:0;
+  border:0px solid transparent;
+  font-size:1.1em;
+}
+
+
+#speakers tr {
+  margin:0;
+  padding:0 0.4em;
+  border:0;
+}
+#speakers td {
+  vertical-align:top;
+  margin:0px;
+  padding:0.5em 0.5em;
+  border:0;
+  text-align:left;
+}
+
+#speakers td span {
+  font-size:0.7em;
+  line-height: 0.5em;
+}
+
+
 #sponsors div.logos {
   text-align:center;
 }
+
 
 .logos a {
   display:inline-block;
