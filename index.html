@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="static/css/style.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <script src="static/js/d3.min.js" type="text/javascript"></script>
+        <script src="http://d3js.org/d3.hexbin.v0.min.js" type="text/javascript"></script>
         <script src="static/js/cubehelix.min.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
         <script src="static/js/jquery.sticky.js" type="text/javascript"></script>
@@ -134,11 +135,13 @@
                         &lsaquo;
                       </div>
                     </div> -->   
-                    <a class="secarr" id="up" href="#home"><img src="img/menuarrup.png" alt="next" /></a>
+                    <a class="secarr" id="up" href="#home"><img src="img/menuarrup.png" alt="previous" /></a>
                     <a class="secarr" id="down" href="#about"><img src="img/menuarrdown.png" alt="next" /></a>
         <!--end arrows-->
         <!--begin content-->
                 <div class="content" id="about">
+                
+
                     <div>
                         <div>
                             <h1>
@@ -365,8 +368,50 @@
                     return [Math.random() * width, Math.random() * height];
                 };
             };
+/*
+            //hexbin
+
+            var margin = {top: 20, right: 20, bottom: 30, left: 40},
+                width = 960 - margin.left - margin.right,
+                height = 500 - margin.top - margin.bottom;
+
+            var radius = 40;
+            var hexbin = d3.hexbin()
+                .size([width, height])
+                .radius(20);
+                
+            var points = hexbin.centers()
 
 
+            var svg = d3.select("#about-background").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            var color = d3.scale.cubehelix()
+                .domain([0, 2000])
+                .range([d3.hsl(0, 0, 1), d3.hsl(0, 0, 0.6)])
+                .clamp(true);
+
+        svg.append("clipPath")
+            .attr("id", "clip")
+          .append("rect")
+            .attr("class", "mesh")
+            .attr("width", width)
+            .attr("height", height);
+
+        svg.append("g")
+            .attr("clip-path", "url(#clip)")
+          .selectAll(".hexagon")
+            .data(hexbin(points))
+          .enter().append("path")
+            .attr("class", "hexagon")
+            .attr("d", hexbin.hexagon())
+            .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+            .style("fill", function(d) { return color(Math.ceil(Math.random()*2000)); });
+
+            */
 
 
 

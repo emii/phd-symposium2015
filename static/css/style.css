@@ -492,6 +492,17 @@ footer::before {
     visibility: collapse;
   }
 
+  nav ul li::after {
+    content: "▾";
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    width: 100%;
+    font-size: 1.2;
+    z-index: -1;
+    color: #fff;
+}
+
   nav ul li a {
     width: 100%;
     padding: 0px;
@@ -695,5 +706,24 @@ footer::before {
   border:0;
   text-align:left;
 }
+/*
+.hexagon {
+  fill: none;
+  stroke: #111;
+  stroke-width: .5px;
+}
 
-
+#about-background { 
+     position: absolute;
+  margin:0;
+  padding: 0;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    z-index: 0;
+}
+#about-background svg{
+  margin:0;
+  padding: 0;
+}
+*/
