@@ -329,7 +329,7 @@ nav ul li a.disabled:hover {
   width:4em;
   height:4em;
   cursor:pointer;
-  z-index:100;
+  z-index:200;
 }
 
 
@@ -443,16 +443,29 @@ div.content>div {
 footer {
     clear: both;
     margin: 0;
-    padding: 30px;
+    padding: 2em;
     border-top: 1px solid rgba(143,20,20,1);
     position: relative;
-    background-color: rgba(174, 24, 24, 1);
+    
     color: #fafafa;
     text-align: center;
+    /*background:url('../../static/media/images/ATC-footer.png') center bottom no-repeat;*/
+    background-color: rgba(174, 24, 24, 1);
+    /*background-size:contain;*/
+    /*height: 400px;*/
 }
 
+#previous{
+    background:url('../../static/media/images/ATC-footer.png') center bottom no-repeat;
+    background-size:contain;
+    min-height: 600px;
+    position: relative;
+}
+
+
+
 footer::before {
-    background: rgba(174,25,25,1);
+    background: rgba(227, 61, 61, 1);
     content: "";
     position: absolute;
     top: 0;
@@ -685,9 +698,9 @@ footer::before {
 }
 
 #registration table {
-  width:80%;
+  width:90%;
   border-collapse:collapse;
-  margin:2em 0 0 0;
+  margin:2em auto;
   padding:0;
   border:0px solid transparent;
   font-size:1em;
@@ -702,7 +715,7 @@ footer::before {
 #registration td {
   vertical-align:top;
   margin:0px;
-  padding:0.5em 0.5em;
+  padding:1em 0.5em;
   border:0;
   text-align:left;
 }
