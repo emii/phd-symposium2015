@@ -707,10 +707,40 @@ footer::before {
   text-align:left;
 }
 
+.btn{
+  margin: 0em 1em;
+  position:relative;
+  display:inline-block;
+  color:white;
+  font-size:0.8em;
+  text-decoration:none;
+  border:3px solid rgba(174, 24, 24, 1);
+  padding:0em 2em;
+  border-radius:2em;
+  /*box-shadow:1px 1px 1px black;*/
+  background:rgba(174, 24, 24, 1);
+  background-image: -webkit-linear-gradient(top, rgba(209, 38, 38, 1), rgba(200, 40, 40, 1));
+  background-image: -moz-linear-gradient(top, rgba(209, 38, 38, 1), rgba(200, 40, 40, 1));
+  background-image: -ms-linear-gradient(top, rgba(209, 38, 38, 1), rgba(200, 40, 40, 1));
+  background-image: -o-linear-gradientrgba(209, 38, 38, 1), rgba(200, 40, 40, 1));
+  background-image: linear-gradient(to bottom, rgba(200, 38, 38, 1), rgba(200, 40, 40, 1));
+}
+
+.btn:hover{
+  background:rgba(227,62,62,1);
+  text-decoration:none;
+  background-image: -webkit-linear-gradient(top, rgba(227,62,62,1), rgba(200, 24, 24, 1));
+  background-image: -moz-linear-gradient(top, rgba(227,62,62,1), rgba(200, 24, 24, 1));
+  background-image: -ms-linear-gradient(top, rgba(227,62,62,1), rgba(200, 24, 24, 1));
+  background-image: -o-linear-gradient(top, rgba(227,62,62,1), rgba(200, 24, 24, 1));
+  background-image: linear-gradient(to bottom, rgba(227,62,62,1), rgba(200, 24, 24, 1));
+  
+}
+
 #speakers table {
   width:80%;
   border-collapse:collapse;
-  margin:2em 0 0 0;
+  margin:2em auto;
   padding:0;
   border:0px solid transparent;
   font-size:1.1em;
