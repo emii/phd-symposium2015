@@ -458,6 +458,7 @@ footer {
 
 #previous{
     background:url('../../static/media/images/ATC-footer.png') center bottom no-repeat;
+    background-color: #eee;
     background-size:contain;
     min-height: 600px;
     position: relative;
