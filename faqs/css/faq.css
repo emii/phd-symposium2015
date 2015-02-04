@@ -1,0 +1,107 @@
+/********************/
+/* GENERAL SETTINGS */
+/********************/
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.answer {
+ font-weight:normal;
+ color:black;
+}
+
+/********************/
+/* EXPANDABLE LIST  */
+/********************/
+#listContainer{
+  margin-top:0.3em;
+}
+
+#expList ul {
+    list-style: none;
+    margin:0.625em 0px;
+    padding:0;
+    cursor: pointer;
+}
+
+#expList p {
+    margin:0;
+    display:block;
+}
+#expList p:hover {
+    background-color:#ff00ff;
+}
+#expList li {
+    list-style: none;
+    margin:0 0 0 0;
+    padding:0px 0 0.75em 1.1em;    
+    cursor: pointer;line-height:140%;
+    text-indent:0px;
+    background-position: 0 0.4em;
+    background-repeat: no-repeat;
+    font-weight:bold;
+    color:#006666;
+}
+#expList li:hover {
+  color: #e33e3e;
+}
+#expList li:active {
+  color:#e33e3e;
+}
+/* Collapsed state for list element */
+#expList .collapsed {
+    background-image: url(../../img/collapsed.png);
+}
+/* Expanded state for list element
+/* NOTE: This class must be located UNDER the collapsed one */
+#expList .expanded {
+    background-image: url(../../img/expanded.png);
+}
+
+#expList li ul li {
+  padding:0 0 0 1.1em;
+}
+.listControl{
+  margin-bottom: 1em;
+}
+/* colors
+green: #73b360;
+red: #e33e3e;
+petrol: #006666;
+*/
+.listControl a {
+    border: 1px solid #006666;
+    cursor: pointer;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin-right: 5px;
+    padding: 4px 10px;
+	font-weight:bold;
+}
+
+.listControl a:hover {
+  text-decoration:none;
+  border:1px solid #e33e3e;
+}
+
+.listControl a:active {
+  border:1px solid #e33e3e;
+}
+
+
+@media only screen and (max-width: 588px) {
+  #expList {
+    margin:0;
+    padding:0;
+  }
+  #expList li ul li {
+    padding-left:0;
+  }
+}
