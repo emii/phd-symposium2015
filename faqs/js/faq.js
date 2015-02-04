@@ -42,50 +42,9 @@ function prepareList() {
 /**************************************************************/
 $(document).ready( function() {
   prepareList()
-  $('#menu ul li a').click(function(){
-
-  if ($('#menu').hasClass('show')) $('#menu').removeClass('show');
-    else $('#menu').addClass('show');
-    //$('#menu').removeClass('show');
-  });
-  
-  var $root = $('html, body');
-  $("a[href*='#']").click(function() {
-      var href = $.attr(this, 'href');
-      $root.animate({
-          scrollTop: $(href).offset().top
-      }, 300, function () {
-          window.location.hash = href;
-      });
-      return false;
-  });
-  
-  $(document).scroll(function(){
-    if ($(document).scrollTop() > $("#contact").offset().top - 250 || $(document).scrollTop() > $(document).height() - $(window).height() - 50 ) {
-      $(".menu a").removeClass("active");
-      $("#acontact").addClass("active");
-      $("#menubutton>a").text("Contact");
-    }
-    else if ($(document).scrollTop() > $("#faq").offset().top - 250) {
-      $(".menu a").removeClass("active");
-      $("#ahome").addClass("active");
-      $("#menubutton>a").text("FAQs");
-    }
-  });
-  
-  $('#menu ul li a').click(function(){
-    if ($('#menu').hasClass('show')) $('#menu').removeClass('show');
-    else $('#menu').addClass('show');
-    //$('#menu').removeClass('show');
-  });
-  
-  $("#t").click(function(){
-    $('#totoro').fadeIn(100);
-  });
-  
-  $("#tclose").click(function(){
-    $('#totoro').fadeOut(100);
-  });
+ var nav = $('#my_fixable_header');
+  nav.sticky({topSpacing: 0, responsiveWidth: true, center: true, getWidthFrom: 'body', wrapperClassName: 'nav-wrapper'});
+  $('.nav-wrapper').css("width", "100%");
   
 });
 
