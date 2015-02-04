@@ -559,8 +559,9 @@ footer::before {
     display: block;
     margin-left: calc(50% - 5em);
   }
-
-
+  div.content {
+    font-size: 0.9em;
+  }
 }
 
 @media(max-width: 425px) {
@@ -580,7 +581,9 @@ footer::before {
 		font-size: 0.9em;
 		line-height: 2.78em;
 	}
-	
+    div.content {
+        font-size: 0.8em;
+    }
 
 }
 
