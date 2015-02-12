@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $("html").click(function() {
         $("nav").removeClass("show");
+        $("nav ul li a").removeClass("suppress")
     });
     
     $("nav ul").click(function(e){ 
@@ -10,10 +11,12 @@ $(document).ready(function() {
     $("nav ul li a").click(function(e){
         if ($("nav").hasClass("show")) {
             $("nav").removeClass("show");
+            $("nav ul li a").removeClass("suppress")
         }
         else {
             $("nav").addClass("show");
             if ($("nav").css("padding-left") == "80px") {
+                $("nav ul li a").addClass("suppress")
                 e.preventDefault();
             }
         }
@@ -115,17 +118,19 @@ $(document).ready(function() {
     return false;
   }
   
-  $("a[href*='#']").click(function() {
-    var href = $.attr(this, 'href');
-    //if (href.indexOf("/#")==0) {
-      href=href.substr(href.indexOf("#"));
-    //}
-    history.pushState(null, null, href);
-    $root.animate({
-        scrollTop: $(href).offset().top
-    }, 300, function () {          
-        
-    });
+  $("a[href*='#']").click(function(e) {
+    if (!$(e.target).hasClass("suppress")) {
+        var href = $.attr(this, 'href');
+        //if (href.indexOf("/#")==0) {
+          href=href.substr(href.indexOf("#"));
+        //}
+        history.pushState(null, null, href);
+        $root.animate({
+            scrollTop: $(href).offset().top
+        }, 300, function () {          
+            
+        });
+    }
     return false;
   });
 
