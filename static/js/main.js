@@ -162,7 +162,7 @@ $(document).ready(function() {
   $('#speakers_wrap').prepend('\
       <div class="speaker left">\
       </div>');
-  $('#speakers_wrap .left').load('speakers/' + names[speaker.prev()] + '.txt',{ "_": $.now() });
+  $('#speakers_wrap .left').load('speakers/' + names[speaker.prev()] + '.html',{ "_": $.now() });
   
   /*$('a[data-speaker=' + speaker.val + ']').addClass('selected');*/
   
@@ -176,7 +176,7 @@ $(document).ready(function() {
     $('#speakers_wrap').prepend('\
         <div class="speaker right">\
         </div>');
-    $('#speakers .right').load('speakers/' + names[speaker.next()] + '.txt',{ "_": $.now() });
+    $('#speakers .right').load('speakers/' + names[speaker.next()] + '.html',{ "_": $.now() });
     $('a.selected').removeClass('selected');
     $('a[data-speaker=' + speaker.val + ']').addClass('selected');
   }
@@ -190,7 +190,7 @@ $(document).ready(function() {
     $('#speakers_wrap').prepend('\
         <div class="speaker left">\
         </div>');
-    $('#speakers .left').load('speakers/' + names[speaker.prev()] + '.txt',{ "_": $.now() });
+    $('#speakers .left').load('speakers/' + names[speaker.prev()] + '.html',{ "_": $.now() });
     $('a.selected').removeClass('selected');
     $('a[data-speaker=' + speaker.val + ']').addClass('selected');
   }
@@ -201,14 +201,14 @@ $(document).ready(function() {
       $('#speakers_wrap').prepend('\
         <div class="speaker right">\
         </div>');
-      $('#speakers .right').load('speakers/' + names[num] + '.txt',{ "_": $.now() });
+      $('#speakers .right').load('speakers/' + names[num] + '.html',{ "_": $.now() });
     }
     else {      
       $('#speakers .left').remove();
       $('#speakers_wrap').prepend('\
         <div class="speaker left">\
         </div>');
-      $('#speakers .left').load('speakers/' + names[num] + '.txt',{ "_": $.now() });
+      $('#speakers .left').load('speakers/' + names[num] + '.html',{ "_": $.now() });
     }
   }
   
