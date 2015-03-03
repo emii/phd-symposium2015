@@ -1,0 +1,6 @@
+          <div>
+            <img src="/speakers/Tramontano.jpg" />
+            <h2><a href="http://www.biocomputing.it/" target="_blank" alt="Prof. Dr. Anna Tramontano">Prof. Dr. Anna Tramontano</a></h2>
+            <h3>University of Rome "La Sapienza"</h3>
+            <p>Anna Tramontano was trained as a physicist but she soon became fascinated by the complexity of biology and by the promises of computational biology. After a post-doctoral period at UCSF, she joined the Biocomputing Programme of the EMBL in Heidelberg. In 1990 she moved back to Italy to work in the Merck Research Laboratories near Rome. In 2001, she returned to the academic world as a Chair Professor of Biochemistry in "La Sapienza" University in Rome where she continues to pursue her scientific interests on protein structure prediction and analysis in the Department of Physics. She has been a member of the Scientific Council of the ERC, is a member of EMBO and of the Advisory Boards of several prestigious European Institutions. </p>
+          </div>

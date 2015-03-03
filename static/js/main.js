@@ -134,6 +134,99 @@ $(document).ready(function() {
     return false;
   }); 
 
+  var speaker = {
+    val: 0,
+    max: 2,
+    next: function() {
+      if (this.val >= (this.max -1)) return 0;
+      else return this.val+1;
+    },
+    prev: function() {
+      if (this.val <= 0) return this.max-1;
+      else return this.val-1;
+    }
+  }
+
+  var names=["Tramontano","Norden"];
+
+  $('#speakers_wrap').prepend('\
+      <div class="speaker right">\
+      </div>');
+  $('#speakers_wrap .right').load('speakers/' + names[speaker.next()] + '.txt',{ "_": $.now() });
+  
+  /*$('#speakers_wrap').prepend('\
+      <div class="speaker center">\
+      </div>');
+  $('.center').load('speakers/' + names[speaker.val] + '.txt',{ "_": $.now() });
+  */
+  $('#speakers_wrap').prepend('\
+      <div class="speaker left">\
+      </div>');
+  $('#speakers_wrap .left').load('speakers/' + names[speaker.prev()] + '.txt',{ "_": $.now() });
+  
+  /*$('a[data-speaker=' + speaker.val + ']').addClass('selected');*/
+  
+  
+  function next_speaker(update) {
+    //update = typeof update !== 'undefined' ? a : true;
+    if (update) speaker.val = speaker.next();
+    $('#speakers .left').remove();
+    $('#speakers .center').removeClass('center').addClass('left');
+    $('#speakers .right').removeClass('right').addClass('center');
+    $('#speakers_wrap').prepend('\
+        <div class="speaker right">\
+        </div>');
+    $('#speakers .right').load('speakers/' + names[speaker.next()] + '.txt',{ "_": $.now() });
+    $('a.selected').removeClass('selected');
+    $('a[data-speaker=' + speaker.val + ']').addClass('selected');
+  }
+  
+  function prev_speaker(update) {
+    //update = typeof update !== 'undefined' ? a : true;
+    if (update) speaker.val = speaker.prev();
+    $('#speakers .right').remove();
+    $('#speakers .center').removeClass('center').addClass('right');
+    $('#speakers .left').removeClass('left').addClass('center');
+    $('#speakers_wrap').prepend('\
+        <div class="speaker left">\
+        </div>');
+    $('#speakers .left').load('speakers/' + names[speaker.prev()] + '.txt',{ "_": $.now() });
+    $('a.selected').removeClass('selected');
+    $('a[data-speaker=' + speaker.val + ']').addClass('selected');
+  }
+  
+  function load_speaker(num, right) {
+    if (right) {
+      $('#speakers .right').remove();
+      $('#speakers_wrap').prepend('\
+        <div class="speaker right">\
+        </div>');
+      $('#speakers .right').load('speakers/' + names[num] + '.txt',{ "_": $.now() });
+    }
+    else {      
+      $('#speakers .left').remove();
+      $('#speakers_wrap').prepend('\
+        <div class="speaker left">\
+        </div>');
+      $('#speakers .left').load('speakers/' + names[num] + '.txt',{ "_": $.now() });
+    }
+  }
+  
+  function goto_speaker(num) {
+    if (num > speaker.val) {
+      speaker.val = num;
+      //speaker.val = speaker.prev();
+      next_speaker(false);
+    }
+    else if (num < speaker.val) {
+      speaker.val = num;
+      //speaker.val = speaker.next();
+      prev_speaker(false);
+    }    
+    $('a.selected').removeClass('selected');
+    $('a[data-speaker=' + num + ']').addClass('selected');
+  }
+
   cartodb.createVis('map', 'http://robodarguin.cartodb.com/api/v2/viz/70c819f2-c190-11e4-ab66-0e853d047bba/viz.json')
         .done(function(vis, layers) {
           // layer 0 is the base layer, layer 1 is cartodb layer
