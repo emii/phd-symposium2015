@@ -152,7 +152,7 @@ $(document).ready(function() {
   $('#speakers_wrap').prepend('\
       <div class="speaker right">\
       </div>');
-  $('#speakers_wrap .right').load('speakers/' + names[speaker.next()] + '.txt',{ "_": $.now() });
+  $('#speakers_wrap .right').load('speakers/' + names[speaker.next()] + '.html',{ "_": $.now() });
   
   /*$('#speakers_wrap').prepend('\
       <div class="speaker center">\
