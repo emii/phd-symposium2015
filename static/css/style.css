@@ -852,6 +852,34 @@ footer::before {
   width:15%;
 }
 
+div.map-wrapper{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+div#map{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+}
+
+div.overlay{
+  position: absolute;
+  margin:0 auto;
+  top:0;
+  left: 35%;
+  z-index: 1;
+}
+
+div.overlay>div {
+
+    margin: 0px auto;
+    padding: 8em 0px;
+}
+
 /*
 .hexagon {
   fill: none;

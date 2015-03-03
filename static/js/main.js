@@ -132,11 +132,24 @@ $(document).ready(function() {
         });
     }
     return false;
-  });
+  }); 
+
+  cartodb.createVis('map', 'http://robodarguin.cartodb.com/api/v2/viz/70c819f2-c190-11e4-ab66-0e853d047bba/viz.json')
+        .done(function(vis, layers) {
+          // layer 0 is the base layer, layer 1 is cartodb layer
+          // setInteraction is disabled by default
+          layers[1].on('featureOver', function(e, pos, latlng, data) {
+            cartodb.log.log(e, pos, latlng, data);
+          });
+          // you can get the native map to work with it
+          var map = vis.getNativeMap();
+          // now, perform any operations you need
+          // map.setZoom(3);
+          // map.panTo([50.5, 30.5]);
+        })
+        .error(function(err) {
+          console.log(err);
+        });
 
 
-
-
-
-  
 });
