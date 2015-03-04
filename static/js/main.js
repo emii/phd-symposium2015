@@ -147,7 +147,7 @@ $(document).ready(function() {
     }
   }
 
-  var names=["Tramontano","Norden"];
+  var names=["Bernardo","Gilbert","Hames","Mustonen","Norden","Tramontano"];
 
   $('#speakers_wrap').prepend('\
       <div class="speaker right">\
@@ -157,7 +157,7 @@ $(document).ready(function() {
   /*$('#speakers_wrap').prepend('\
       <div class="speaker center">\
       </div>');
-  $('.center').load('speakers/' + names[speaker.val] + '.txt',{ "_": $.now() });
+  $('.center').load('speakers/' + names[speaker.val] + '.html',{ "_": $.now() });
   */
   $('#speakers_wrap').prepend('\
       <div class="speaker left">\
