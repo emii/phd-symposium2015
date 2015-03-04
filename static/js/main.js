@@ -227,6 +227,44 @@ $(document).ready(function() {
     $('a[data-speaker=' + num + ']').addClass('selected');
   }
 
+    $('body').keyup(function(event) {
+    if ($('#aspeakers').hasClass('active')) {
+      if (event.which == 37) prev_speaker(true);
+      if (event.which == 39) next_speaker(true);
+    }
+    if ($('#aprogramme').hasClass('active')) {
+      if (event.which == 37) prev_day(true);
+      if (event.which == 39) next_day(true);
+    }
+  });
+  
+  $('#rarr').click(function() {
+    if ($('#aspeakers').hasClass('active')) next_speaker(true);
+    if ($('#aprogramme').hasClass('active')) next_day(true);
+  });
+  
+  $('#larr').click(function() {
+    if ($('#aspeakers').hasClass('active')) prev_speaker(true);
+    if ($('#aprogramme').hasClass('active')) prev_day(true);
+  });
+
+  $('a[data-speaker]').click(function(event) {
+    event.preventDefault();
+    num = parseInt($(this).attr('data-speaker'));
+    //alert('num='+num+'\n val='+speaker.val);
+    if (num > speaker.val) {
+      load_speaker(num, true);
+      setTimeout(function(){goto_speaker(num);}, 100);
+      setTimeout(function(){load_speaker(speaker.prev(),false);}, 500);
+    }
+    else if (num < speaker.val) {
+     load_speaker(num, false);
+     setTimeout(function(){goto_speaker(num);}, 100);
+      setTimeout(function(){load_speaker(speaker.next(),true);}, 500);
+    }
+    //speaker.val=num;
+  });
+
   cartodb.createVis('map', 'http://robodarguin.cartodb.com/api/v2/viz/70c819f2-c190-11e4-ab66-0e853d047bba/viz.json')
         .done(function(vis, layers) {
           // layer 0 is the base layer, layer 1 is cartodb layer
