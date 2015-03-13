@@ -136,7 +136,7 @@ $(document).ready(function() {
 
   var speaker = {
     val: 0,
-    max: 2,
+    max: 6,
     next: function() {
       if (this.val >= (this.max -1)) return 0;
       else return this.val+1;
