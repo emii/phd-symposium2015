@@ -33,6 +33,7 @@ $(document).ready(function() {
     }
       
   $(document).scroll(function(){
+
     if ($(document).scrollTop() - $("#previous").offset().top > -200) {
       reset_active();
       set_active("contact");
@@ -70,12 +71,14 @@ $(document).ready(function() {
       set_active("programme");
       $("#down").attr("href","#travel");
       $("#up").attr("href","#speakers");
+ 
     }
     else if ($(document).scrollTop() - $("#speakers").offset().top > -200) {
       reset_active();
       set_active("speakers");
       $("#down").attr("href","#programme");
       $("#up").attr("href","#about");
+      
     }
     else if ($(document).scrollTop() - $("#about").offset().top > -200) {
       reset_active();
@@ -90,6 +93,7 @@ $(document).ready(function() {
       $("#down").attr("href","#about");
       $("#up").css("visibility","hidden");
       $("#down").css("visibility","visible");
+
     }
     else  {
       reset_active()
@@ -281,6 +285,69 @@ $(document).ready(function() {
         .error(function(err) {
           console.log(err);
         });
+    //=========mutable text===============================
+            
+            var mu=0.0041;
+            var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+
+            var mutable=d3.selectAll(".mutable");
+            var sel=mutable.selectAll("p");
+            var dataset= new Array(sel[0].length);
+
+            for (var i = 0; i <= sel[0].length - 1; i++) {
+                dataset[i]=sel[0][i].textContent;
+            };
+            
+            function getRandomInt(min, max) {
+              return Math.floor(Math.random() * (max - min + 1)) + min;
+            };
+
+            function update(data) {
+
+    
+                sel.data(data).html(function(d){return d});
+                 
+                sel.selectAll(".tween")
+                  .transition()
+                  .duration(10000)
+                  .style("color", function() {
+                    var r = getRandomInt(227, 255),
+                        g = getRandomInt(61, 81),
+                        b = getRandomInt(61, 81);
+                    return "rgb(" + [r, g, b].join(",") + ")";
+                });
+            }
+            // The initial display.
+            update(mutate(dataset,mu,alphabet));
+
+            /*mutations=setInterval(function() {
+              update(mutate(dataset))
+            }, 3000);*/
+
+
+            
+
+            // Mutates the input array.
+            function mutate(array){
+                contents=new Array(array.length);
+                for (var i = 0; i <= array.length - 1; i++) {
+
+                    sites_num=1;//Math.floor(mu*array[i].length);
+                    content=array[i];
+                    while (sites_num) {
+                        site = Math.floor(Math.random() * array[i].length);
+                        //console.log(site)
+                        content='<span>'+content.slice(0,site)
+                        +'<span class ="tween" style="color:red;">'
+                        +content[site]//alphabet[Math.floor(Math.random() * 26)]
+                        +'</span>'
+                        +content.slice(site+1,content.length);
+                        sites_num--;
+                      }
+                    contents[i]=content;
+                };
+                return contents;
+            };
 
 
 });

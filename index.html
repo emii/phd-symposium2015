@@ -53,6 +53,13 @@
           ga('send', 'pageview');
 
         </script>
+        <style>
+
+        .mut{
+            color: rgba(227, 61, 61, 1);
+        }
+
+        </style>
 
     </head>
     <body>
@@ -146,12 +153,13 @@
                             <h1>
                                 About the Symposium
                             </h1>
-                            <p style="text-align:justify;">
-                                Since its inception in 2000, the annual EMBL PhD Symposium has grown into a well-respected meeting of early-career scientists and high-profile speakers. The aim of this year's symposium is to explore the importance of randomness and variability in biology.</p>
-                                <p style="text-align:justify;">To survive and thrive, living systems must navigate the fine line between order and chaos. On the one hand, the stochastic nature of chemistry gives rise to the diversity that fuels adaptation and creativity, from symmetry breaking in tissue development to the emergence of novel genes in evolution. On the other hand, stochasticity threatens the integrity of organised structures and the reliability of controlled processes, necessitating repair mechanisms, checkpoint control systems and feedback loops.
+                            <div class="mutable">
+                            <p >Since its inception in 2000, the annual EMBL PhD Symposium has grown into a well-respected meeting of early-career scientists and high-profile speakers. The aim of this year's symposium is to explore the importance of randomness and variability in biology.</p>
+                                <p >To survive and thrive, living systems must navigate the fine line between order and chaos. On the one hand, the stochastic nature of chemistry gives rise to the diversity that fuels adaptation and creativity, from symmetry breaking in tissue development to the emergence of novel genes in evolution. On the other hand, stochasticity threatens the integrity of organised structures and the reliability of controlled processes, necessitating repair mechanisms, checkpoint control systems and feedback loops.
                                 Whether the result of a random event or of controlled divergence, variability is a fundamental characteristic of living matter. Differences between molecules, between cells, and between individuals are essential for the proper functioning of biological systems. Seemingly homogeneous populations, when studied more closely, exhibit remarkable levels of diversity, and technical advances are increasingly enabling such inquiries.</p>
-                                <p style="text-align:justify;">In short, living systems must robustly maintain their internal organisation, yet remain flexible to respond and adapt to the challenges of a dynamic environment. The balance between these opposing requirements shapes life across all scales, from molecules to ecosystems, and its investigation is central to modern biological research.</p>
-                                <p style="text-align:justify;">Characterised by the diverse backgrounds of its organisers, the EMBL PhD symposium has always made multidisciplinarity one of its hallmarks. By bringing together leading scientists who tackle issues of randomness and variability from different perspectives, we seek to enable an exchange of ideas and inspire early-career researchers to see biological systems from a new point of view.</p>
+                                <p >In short, living systems must robustly maintain their internal organisation, yet remain flexible to respond and adapt to the challenges of a dynamic environment. The balance between these opposing requirements shapes life across all scales, from molecules to ecosystems, and its investigation is central to modern biological research.</p>
+                                <p >Characterised by the diverse backgrounds of its organisers, the EMBL PhD symposium has always made multidisciplinarity one of its hallmarks. By bringing together leading scientists who tackle issues of randomness and variability from different perspectives, we seek to enable an exchange of ideas and inspire early-career researchers to see biological systems from a new point of view.</p>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -452,6 +460,11 @@
                     return [Math.random() * width, Math.random() * height];
                 };
             };
+          
+
+
+            
+            //============================================
 /*
             //hexbin
 
