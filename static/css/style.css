@@ -423,7 +423,7 @@ div:active>.arr {
 
 div.content {
     background: #fafafa;
-    padding: 8em 0px;
+    padding: 7em 0px;
     margin: 0px auto;
     width: 100%;
     font-size: 1.1em;
@@ -605,6 +605,7 @@ footer::before {
   overflow:hidden;
   position:relative;
   z-index:-3;
+  font-size: 1em;
 }
 
 #speakers_wrap {
