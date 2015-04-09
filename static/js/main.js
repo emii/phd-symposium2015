@@ -231,6 +231,20 @@ $(document).ready(function() {
     $('a[data-speaker=' + num + ']').addClass('selected');
   }
 
+    function next_day() {
+    $('#programme .left').hide().addClass("temp");
+    $('#programme .center').removeClass('center').addClass('left');
+    $('#programme .right').removeClass('right').addClass('center');
+    setTimeout(function(){$('#programme .temp').removeClass('temp').removeClass('left').addClass('right').show();},300);
+  }
+  
+  function prev_day() {
+    $('#programme .right').hide().addClass("temp");
+    $('#programme .center').removeClass('center').addClass('right');
+    $('#programme .left').removeClass('left').addClass('center');
+    setTimeout(function(){$('#programme .temp').removeClass('temp').removeClass('right').addClass('left').show();},300);
+  }
+  
     $('body').keyup(function(event) {
     if ($('#aspeakers').hasClass('active')) {
       if (event.which == 37) prev_speaker(true);
