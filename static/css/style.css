@@ -492,101 +492,6 @@ footer::before {
 
 
 
-@media(max-width: 800px) {
-    #title-wrapper {
-        font-size: 0.8em;
-    }
-
-}
-
-@media(max-width: 600px) {
-    #title-wrapper {
-        font-size: 0.6em;
-    }
-}
-
-@media(max-width: 1050px) {
-  nav {
-      text-align: center;
-      background-size: contain, contain;
-      /* If you change this, then you also need to change the value for 
-          "if ($("nav").css("padding-left") == "80px") {" in main.js
-          This is a bit of a hack. */
-      padding: 0 80px 0 80px;
-  }
-    
-  nav ul li {
-    width: 0;
-    height: 0;
-    visibility: collapse;
-  }
-
-  nav ul li::after {
-    content: "▾";
-    position: absolute;
-    top: 1.5em;
-    left: 0;
-    width: 100%;
-    font-size: 1.2;
-    z-index: -1;
-    color: #fff;
-}
-
-  nav ul li a {
-    width: 100%;
-    padding: 0px;
-}
-  
-  nav ul li.active {
-    width: auto;
-    height: auto;
-    visibility: visible;
-  }
-  
-  nav ul li a.active {
-    background-color:  transparent;
-  }
-
-  nav.show ul {
-      width: 10em;
-    background-color: rgba(174, 24, 24, 1);
-  }
-  
-  nav.show ul li {
-    width: 10em;
-    height: auto;
-    visibility: visible;
-    display: block;
-    margin-left: calc(50% - 5em);
-  }
-  div.content {
-    font-size: 0.9em;
-  }
-}
-
-@media(max-width: 425px) {
-	#my_fixable_header {
-		height: 2.5em;
-	}
-	
-	.external-header-links ul {
-		padding: 0 0.25em 0 0.25em;
-	}
-	
-	.external-header-links ul li {
-		padding: 0 0.25em 0 0.25em;
-	}
-	
-	nav ul li a {
-		font-size: 0.9em;
-		line-height: 2.78em;
-	}
-    div.content {
-        font-size: 0.8em;
-    }
-
-}
-
 
 
 
@@ -942,6 +847,121 @@ div.overlay>div {
     margin: 0px auto;
     padding: 8em 0px;
 }
+@media(max-width: 800px) {
+    #title-wrapper {
+        font-size: 0.8em;
+    }
+    #speakers {
+    height:56em;
+  }
+  .speaker, .day {
+    width:80%;
+  }
+  .speaker img {
+    margin-right:2em;
+    float:left;
+    height:15em;
+    width:auto;
+  }
+  .arr {
+    width:0.5em;
+  }
+  div:hover>.arr {
+    width:0.71em;
+  }
+
+}
+
+@media(max-width: 600px) {
+    #title-wrapper {
+        font-size: 0.6em;
+    }
+
+}
+
+@media(max-width: 1050px) {
+  nav {
+      text-align: center;
+      background-size: contain, contain;
+      /* If you change this, then you also need to change the value for 
+          "if ($("nav").css("padding-left") == "80px") {" in main.js
+          This is a bit of a hack. */
+      padding: 0 80px 0 80px;
+  }
+    
+  nav ul li {
+    width: 0;
+    height: 0;
+    visibility: collapse;
+  }
+
+  nav ul li::after {
+    content: "▾";
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    width: 100%;
+    font-size: 1.2;
+    z-index: -1;
+    color: #fff;
+}
+
+  nav ul li a {
+    width: 100%;
+    padding: 0px;
+}
+  
+  nav ul li.active {
+    width: auto;
+    height: auto;
+    visibility: visible;
+  }
+  
+  nav ul li a.active {
+    background-color:  transparent;
+  }
+
+  nav.show ul {
+      width: 10em;
+    background-color: rgba(174, 24, 24, 1);
+  }
+  
+  nav.show ul li {
+    width: 10em;
+    height: auto;
+    visibility: visible;
+    display: block;
+    margin-left: calc(50% - 5em);
+  }
+  div.content {
+    font-size: 0.9em;
+  }
+}
+
+@media(max-width: 425px) {
+  #my_fixable_header {
+    height: 2.5em;
+  }
+  
+  .external-header-links ul {
+    padding: 0 0.25em 0 0.25em;
+  }
+  
+  .external-header-links ul li {
+    padding: 0 0.25em 0 0.25em;
+  }
+  
+  nav ul li a {
+    font-size: 0.9em;
+    line-height: 2.78em;
+  }
+    div.content {
+        font-size: 0.8em;
+    }
+
+}
+
+
 
 /*
 .hexagon {

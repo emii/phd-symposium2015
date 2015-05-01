@@ -140,7 +140,7 @@ $(document).ready(function() {
 
   var speaker = {
     val: 0,
-    max: 6,
+    max: 8,
     next: function() {
       if (this.val >= (this.max -1)) return 0;
       else return this.val+1;
@@ -151,7 +151,7 @@ $(document).ready(function() {
     }
   }
 
-  var names=["Bernardo","Gilbert","Hames","Mustonen","Norden","Tramontano"];
+  var names=["Bernardo","Falcke","Fraser","Gilbert","Hames","Mustonen","Norden","Tramontano"];
 
   $('#speakers_wrap').prepend('\
       <div class="speaker right">\
