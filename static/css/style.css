@@ -510,7 +510,6 @@ footer::before {
   overflow:hidden;
   position:relative;
   z-index:-3;
-  font-size: 1em;
 }
 
 #speakers_wrap {
@@ -626,7 +625,7 @@ footer::before {
 
 #programme {
   width:100%;
-  height:60em;
+  height:50em;
   box-sizing:border-box;
   -moz-box-sizing:border-box;
   overflow:hidden;
@@ -847,37 +846,7 @@ div.overlay>div {
     margin: 0px auto;
     padding: 8em 0px;
 }
-@media(max-width: 800px) {
-    #title-wrapper {
-        font-size: 0.8em;
-    }
-    #speakers {
-    height:56em;
-  }
-  .speaker, .day {
-    width:80%;
-  }
-  .speaker img {
-    margin-right:2em;
-    float:left;
-    height:15em;
-    width:auto;
-  }
-  .arr {
-    width:0.5em;
-  }
-  div:hover>.arr {
-    width:0.71em;
-  }
 
-}
-
-@media(max-width: 600px) {
-    #title-wrapper {
-        font-size: 0.6em;
-    }
-
-}
 
 @media(max-width: 1050px) {
   nav {
@@ -936,6 +905,73 @@ div.overlay>div {
   div.content {
     font-size: 0.9em;
   }
+  .speaker, .day {
+    width:70%;
+  }
+
+  .speaker img {
+    height:15em;
+    width:auto;
+  }
+  
+  #speakers {
+    height: 50em;
+  }
+  
+ 
+}
+@media(max-width: 800px) {
+    #title-wrapper {
+        font-size: 0.8em;
+    }
+
+  .speaker, .day {
+    width:80%;
+  }
+  .speaker img {
+    margin-right:2em;
+    float:left;
+    height:15em;
+    width:auto;
+  }
+   #smallspeakers {
+    width:50em;
+    height:auto;
+    margin:auto;
+    left:0;
+    right:0;
+  }
+  .arr {
+    width:0.5em;
+  }
+  div:hover>.arr {
+    width:0.71em;
+  }
+
+}
+@media(max-width: 700px) {
+    #speakers {
+    height:60em;
+  }
+     #smallspeakers {
+    width:35em;
+  }
+
+  }
+
+@media(max-width: 600px) {
+    #title-wrapper {
+        font-size: 0.6em;
+    }
+      #speakers {
+    height:65em;
+  }
+      #smallspeakers {
+    width:33em;
+    bottom:1em;
+  }
+
+
 }
 
 @media(max-width: 425px) {
@@ -958,8 +994,28 @@ div.overlay>div {
     div.content {
         font-size: 0.8em;
     }
+  .speaker img {
+    float:none;
+  }
+  #smallspeakers {
+    display:none;
+  }
+  #speakers {
+    height:61em;
+  }
+  #programme td {
+    padding:0.5em
+  }
+  td:first-child {
+    width:30%;
+  }
+  td {
+    padding:0.5em 0.5em;
+  }
 
 }
+
+
 
 
 
